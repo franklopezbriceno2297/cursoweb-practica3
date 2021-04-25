@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/skeleton.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div style="margin-top: 5%">
+        <div class="row">
+          <div class="ten columns">
+            <h2>{{title}}</h2>
+          </div>
+          <div class="one column"> 
+            <a class="button" href="/">Home</a>
+          </div>
+          <div class="one column"></div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Edition</th>
+              <th>Copyright</th>
+              <th>Language</th>
+              <th>Pages</th>
+              <th>Author</th>
+              <th>Publisher</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#books}}
+            <tr>
+              <td>{{title}}</td>
+              <td>{{edition}}</td>
+              <td>{{copyright}}</td>
+              <td>{{language}}</td>
+              <td>{{pages}}</td>
+              <td><a href="/author/{{author_id}}">See Author</a></td>
+              <td><a href="/publisher/{{publisher_id}}">See Publisher</a></td>
+              <td>
+                <a class="button" href="/book/{{id}}">Show</a>
+                <!-- <a class="button" href="book/{{id}}/edit">Edit</a> -->
+                <a class="button" href="/book/{{id}}/delete">Erase</a>
+              </td>
+            </tr>
+            {{/books}}
+          </tbody>
+        </table>
+        <a class="button button-primary" href="/book/create">New</a>
+      </div>
+    </div>
+  </div>
+</body>

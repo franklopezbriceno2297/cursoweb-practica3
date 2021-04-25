@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/skeleton.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div style="margin-top: 10%">
+        <div class="row">
+          <div class="ten columns">
+            <h2>{{title}}</h2>
+          </div>
+          <div class="one column"> 
+            <a class="button" href="/">Home</a>
+          </div>
+          <div class="one column"></div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Nationality</th>
+              <th>Birth Year</th>
+              <th>Fields</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#authors}}
+            <tr>
+              <td>{{id}}</td>
+              <td>{{name}}</td>
+              <td>{{nationality}}</td>
+              <td>{{birth_year}}</td>
+              <td>{{fields}}</td>
+              <td>
+                <a class="button" href="/author/{{id}}">Show</a>
+                <!-- <a class="button" href="/author/{{id}}/edit">Edit</a> -->
+                <a class="button" href="/author/{{id}}/delete">Erase</a>
+              </td>
+            </tr>
+            {{/authors}}
+          </tbody>
+        </table>
+        <a class="button button-primary" href="/author/create">New</a>
+      </div>
+    </div>
+  </div>
+</body>

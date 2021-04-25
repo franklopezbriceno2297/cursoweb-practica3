@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/skeleton.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div style="margin-top: 10%">
+        <div class="row">
+          <div class="ten columns">
+            <h2>{{title}}</h2>
+          </div>
+          <div class="one column"> 
+            <a class="button" href="/">Home</a>
+          </div>
+          <div class="one column"></div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Country</th>
+              <th>Founded</th>
+              <th>Genere</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#publishers}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{country}}</td>
+              <td>{{founded}}</td>
+              <td>{{genere}}</td>
+              <td>
+                <a class="button" href="/publisher/{{id}}">Show</a>
+                <!-- <a class="button" href="publisher/{{id}}/edit">Edit</a> -->
+                <a class="button" href="/publisher/{{id}}/delete">Erase</a>
+              </td>
+            </tr>
+            {{/publishers}}
+          </tbody>
+        </table>
+        <a class="button button-primary" href="/publisher/create">New</a>
+      </div>
+    </div>
+  </div>
+</body>

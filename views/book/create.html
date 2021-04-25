@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{title}}</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/css/normalize.css" />
+<link rel="stylesheet" href="/css/skeleton.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="eleven column" style="margin-top: 10%">
+        <h2>{{title}}</h2>
+        <form action="/book" method="post">
+          <div class="row">
+            <div class="four columns">
+              <label>Title</label>
+              <input class="u-full-width" type="text" name="title" />
+            </div>
+            <div class="four columns">
+              <label>Edition</label>
+              <input class="u-full-width" type="text" name="edition" />
+            </div>
+            <div class="four columns">
+              <label>Language</label>
+              <input class="u-full-width" type="text" name="language" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="six columns">
+              <label>Copyright</label>
+              <input class="u-full-width" type="number" name="copyright" />
+            </div>
+            <div class="six columns">
+              <label>Pages</label>
+              <input class="u-full-width" type="number" name="pages" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="six columns">
+              <label>Author Id</label>
+              <input class="u-full-width" type="number" name="authorid" />
+            </div>
+            <div class="six columns">
+              <label>Publisher Id</label>
+              <input class="u-full-width" type="number" name="publisherid" />
+            </div>
+          </div>
+          <button class="button-primary" type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>

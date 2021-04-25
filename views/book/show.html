@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/skeleton.css" />
+</head>
+<body>
+ <div class="container">
+  <div class="row">
+   <div class="eleven column" style="margin-top: 10%">
+    <h2>{{title}}</h2>
+    <form>
+     {{#book}}
+     <div class="row">
+      <div class="six columns">
+        <label>Name</label>
+        <input class="u-full-width" type="text" readonly name="name" value="{{title}}">
+      </div>
+      <div class="six columns">
+        <label>Edition</label>
+        <input class="u-full-width" type="text" readonly name="edition" value="{{edition}}">
+      </div>
+     </div>
+     <div class="row">
+      <div class="four columns">
+        <label>Language</label>
+        <input class="u-full-width" type="text" readonly name="language" value="{{language}}">
+      </div>
+      <div class="four columns">
+        <label>Pages</label>
+        <input class="u-full-width" type="number" readonly name="pages" value="{{pages}}">
+      </div>
+      <div class="four columns">
+        <label>Copyright</label>
+        <input class="u-full-width" type="number" readonly name="copyright" value="{{copyright}}">
+      </div>
+     </div>
+     <div class="row" style="margin-top: 10px">
+      <div class="four columns">
+        <label>
+          <a class="button" href="/author/{{author_id}}">Author</a>
+        </label>
+      </div>
+      <div class="four columns">
+        <label>
+          <a class="button" href="publisher/{{publisher_id}}">Publisher</a>
+        </label>
+      </div>
+     </div>
+     <a class="button button-primary" href="/book" style="margin-top: 20px">Back To Books</a>
+     {{/book}}
+    </form>
+   </div>
+  </div>
+ </div>
+</body>
